@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vinji's Kadai❤</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+    font-family:cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #38e8ee;
+    color: #91b5cd;
+}
+
+header {
+    background-color: #39d3a5;
+    color: #706fb9;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0e0d0d;
+}
+
+.hero {
+    background-image: url('restaurant_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #121010;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    animation: pulse 1.5s infinite;
+}
+
+.cta-button:hover {
+    background-color: #f5ebeb;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Menu Section Styles */
+.Outfit Room {
+    padding: 40px;
+    background-color: #fff;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-heading {
+    font-size: 1.8rem; 
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #cebcbc;
+    padding: 15px 50px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.menu-item {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+    perspective: 800px;
+}
+
+.menu-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: transform 0.6s;
+    box-shadow: 0 0 10px rgba(94, 36, 82, 0.8);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.menu-item h2 {
+    font-size: 1.3rem; 
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.menu-item:hover {
+    box-shadow: 0 0 20px rgba(48, 202, 151, 0.7);
+    transform: translateY(-5px);
+}
+
+.menu-item:hover img {
+    transform: rotateY(180deg);
+}
+
+.menu-item:hover h2 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.about-section {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1f1d1d;
+    padding: 15px 50px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 40px;
+    overflow: hidden; 
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transform: translateY(5px); 
+}
+
+.about-text {
+    flex: 2;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #827575;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.contact-section {
+    background-color: #d8d5d5;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+}
+
+.contact-section h2 {
+    margin-top: 0;
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .cta-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #72c2b1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+}
+
+.contact-form .cta-btn:hover {
+    background-color: #d0c8d1;
+}
+
+footer {
+    background-color: #dcc4e2;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Vinji's kadai✨</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Outfit Room">Outfit Room</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome</h1>
+            <p>A LITTLE THANK YOU<br>RECEIVE 10% OFF AND FREE STANDARD SHIPPING ANYWHERE IN THE US</p>
+            <a href="#Outfit Room" class="cta-button">Shop NOW!</a>
+        </div>
+    </section>
+    <hr>
+    <br>
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="about.jpg" alt="about">
+                </div>
+                <div class="about-text">
+                    <h2>About Vinji's kadai</h2>
+                    <p>Welcome to our dress store, where timeless elegance meets contemporary style.<br>
+                         Explore our curated collection of classic dresses that exude sophistication and grace.<br>
+                          From refined silhouettes to exquisite fabrics, we invite you to discover the perfect ensemble for every occasion.<br>
+                           Embrace a timeless aesthetic that transcends trends – because true style is forever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Menu Section -->
+    <section class="Outfit Room" id="Outfit Room">
+        <h2 class="section-heading">Outfit Room</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h2>Lehenga</h2>
+            </div>
+            <div class="menu-item">
+                <h2>Dresses</h2>
+            </div>
+            <div class="menu-item">
+                <h2>Kurti</h2>
+            </div>
+            <div class="menu-item">
+                <h2>Pants</h2>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <br><br>
+            <h2>Contact Us</h2>
+            <form class="contact-form" action="#" method="post">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                <button type="submit" class="cta-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <br>
+    <footer>
+        <p>&copy; 2023 Vinji's kadai. All rights reserved</p>
+    </footer>
+</body>
+</html>
