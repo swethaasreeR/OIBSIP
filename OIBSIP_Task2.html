@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    background-color: #d895a9;
+    color: #fff;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f3eeee;
+    padding: 1rem;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:#141414
+  }
+  
+  .name-section {
+    flex-grow: 1;
+  }
+  
+  header h1 {
+    margin: 0;
+   }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 1rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .home-section {
+    text-align: center;
+    max-width: 800px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .home-text {
+    flex-basis: 65%;
+    text-align: left;
+  }
+ 
+/* Custom contact bar styles */
+#contact-bar {
+  background-color: #c2bfbf;
+  color: #fff;
+  padding: 5px 10px; 
+  display:flex;
+  text-align: center;
+  cursor: pointer;
+  font-size: 10px; 
+  border-radius: 50px; 
+  width: 55px; 
+  margin: 10px 0 10px 20px; 
+  border: none; 
+  outline: none; 
+}
+
+
+/* Style to match "Website Designer!" text */
+.home-text h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+        
+  .home-photo {
+    flex-basis: 30%;
+    text-align: center;
+  }
+  
+  .home-photo img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(195, 24, 218, 0.8);
+  }
+  
+  .service-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .service-section h3{
+    color:rgb(25, 25, 25, 0.8);
+  }
+  
+  .service-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .service-items {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .service-item {
+    flex-basis: calc(33.33% - 20px);
+    text-align: center;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; 
+  }
+  
+  .service-item:hover::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(70, 28, 28, 0.8), rgba(0, 0, 0, 0));
+    opacity: 0;
+    border-radius: 50%;
+    animation: superHalo 1.5s linear infinite;
+    z-index: -1; 
+    pointer-events: none; 
+    transition: opacity 0.3s ease; 
+  }
+  
+  @keyframes superHalo {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(2);
+    }
+  }
+  .contact-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  h2 {
+    color: rgba(31, 28, 30, 0.8);
+  }
+  
+  .contact-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-section label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-section input,
+  .contact-section textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-section button {
+    background-color: #d054e9;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: #272222;
+    padding: 1rem;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  nav a {
+    color: #6e6464; 
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="name-section">
+                <h1>Portfolio</h1>
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home-section">Home🏠</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#service-section">Services</a></li>
+                    <li><a href="#contact-section">Collaborate</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <hr>
+    </header>
+    <main>
+        
+        <section id="home-section" class="home-section">
+            <div class="home-content">
+                <div class="home-text">
+                    <p><h1>Hello...I'm</h1></p>
+                    <h2>Swethaa sree R</h2>
+                    <p>
+                        <h1>Backend Developer!!</h1>
+                    </p>
+                    <div id="contact-bar">
+                        <a href="#contact-section">Click to Collaborate!</a>
+                    </div>
+                </div>
+                
+                <div class="home-photo">
+                    <img src="sw.jpeg" alt="Your Photo">
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="about-section">
+            <div class="info">
+                <h2>Know Me</h2>
+                <p>As a meticulous back-end developer, I orchestrate the digital symphony behind web applications, meticulously crafting the server-side architecture.<br> My proficiency in languages like Python and Java is the foundation upon which I construct seamless and efficient systems.<br> With a keen eye for data management and a passion for optimizing performance, I bring elegance to the intricate dance between databases and server logic. With each line of code, I strive to elevate user experiences, ensuring the backbone of web applications is not only robust but also tailored for future scalability. <br>In the world of bits and bytes, I find my canvas, painting a portrait of digital functionality that transcends the ordinary.</p>
+                 <p>If you're looking to create a remarkable online presence that stands out from the crowd, I would be like to be a part of your journey. Let's work together to bring your vision to life and make your digital dreams a reality.
+                 </p>
+                <p>Thank you for visiting my portfolio, and I'm looking forward for our collaboration!</p>
+            </div>
+        </section>
+        <br>
+        <hr>
+
+        <section id="service-section" class="service-section">
+            <h2>Services</h2>
+            <div class="service-item">
+                <h3>API Integration</h3>
+                <p> "Seamless Connection, Endless Possibilities"<br>
+                  Facilitate fluid communication between diverse systems by leveraging my skills in API integration.<br> From third-party services to custom APIs, I specialize in creating interconnected ecosystems that enhance the functionality and versatility of web applications.</p>
+            </div>
+            <div class="service-item">
+                <h3>Scalability Planning</h3>
+                <p>"Future-Proofing Digital Ventures"<br>
+                  Navigate the path to growth with my expertise in scalability planning.<br> I architect systems that can gracefully expand to meet increasing demands, ensuring that your web applications are well-equipped for the challenges of tomorrow.</p>
+            </div>
+            <div class="service-item">
+                <h3>Database Management</h3>
+                <p>"Mastering the Art of Data"<br>
+                  Navigate the complexities of data storage and retrieval with my proficiency in database management.<br> Whether it's SQL or NoSQL, I design and optimize databases to ensure efficient data handling, enabling applications to operate with speed and precision.</p>
+            </div>
+        </section>
+        <hr>
+    
+
+        <section id="contact-section" class="contact-section">
+            <div class="contact-form">
+                <fieldset>
+                <h2> <legend>Contact Me</legend> </h2>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+                </fieldset>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Swethaa Sree R. All rights reserved</p>
+    </footer>
+</body>
+</html>
